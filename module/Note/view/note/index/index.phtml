@@ -1,0 +1,86 @@
+<div class="jumbotron">
+    <h1><center><?php echo sprintf($this->translate('El Kaffe%smaskin%s'), '<span class="zf-green">', '</span>') ?></center></h1>
+    <p>El kaffemaskin of your dre4ms</p>
+    <p style="float:right">
+    	Myntmängd: 2kr<br>
+    	Kostnad: 0kr
+    </p>
+    <p><a class="btn btn-success" href="http://framework.zend.com/zf2" target="_blank"><?php echo $this->translate('Köp!') ?> </a></p>
+</div>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $this->translate('Kaffe') ?></h3>
+            </div>
+            <div class="panel-body">
+                <p><a class="btn btn-success" href="javascript:select();" target="_blank"><?php echo $this->translate('Svart') ?> </a></p>
+                <p><a class="btn btn-success" href="http://framework.zend.com/zf2" target="_blank"><?php echo $this->translate('Mocca') ?> </a></p>
+                <p><a class="btn btn-success" href="http://framework.zend.com/zf2" target="_blank"><?php echo $this->translate('Cappuccino') ?> </a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $this->translate('Övrigt') ?></h3>
+            </div>
+            <div class="panel-body">
+                <p><a class="btn btn-success" href="http://framework.zend.com/zf2" target="_blank"><?php echo $this->translate('Choklad') ?> </a></p>
+                <p><a class="btn btn-success" href="http://framework.zend.com/zf2" target="_blank"><?php echo $this->translate('Nyponsoppa') ?> </a></p>
+                <p><a class="btn btn-success" href="http://framework.zend.com/zf2" target="_blank"><?php echo $this->translate('Vatten') ?> </a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $this->translate('Tillbehör') ?></h3>
+            </div>
+            <div class="panel-body">
+                <p><a class="btn btn-success" href="http://framework.zend.com/zf2" target="_blank"><?php echo $this->translate('Mjölk') ?> </a></p>
+                <p><a class="btn btn-success" href="http://framework.zend.com/zf2" target="_blank"><?php echo $this->translate('Socker') ?> </a></p>
+                <p><a class="btn btn-success" href="http://framework.zend.com/zf2" target="_blank"><?php echo $this->translate('Mängd') ?> </a></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $this->translate('Logg') ?></h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped table-hover table-bordered">
+                	<thead>
+                		<th>Köpare</th>
+                		<th>Primärval</th>
+                		<th>Tillägg</th>
+                		<th>Kostnad</th>
+                		<th>Datum</th>
+                		<th>Snatteri</th>
+                	</thead>
+                	<tbody>
+                    <?php foreach($notes as $note) : ?>
+                        <tr>
+                            <td><?php echo $note->buyer ?></td>
+                            <td><?php echo $note->item ?></td>
+                            <td><?php echo $note->extra ?></td>
+                            <td><?php echo $note->price ?></td>
+                            <td><?php echo $note->date ?></td>
+                            <td><?php if(!$note->stolen) { echo '<font color="green">Nej</font>'; } else { echo '<font color="red">Ja</font>'; } ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    alert(1);
+</script>
