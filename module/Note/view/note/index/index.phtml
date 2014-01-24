@@ -16,7 +16,7 @@
                 <h3 class="panel-title"><?php echo $this->translate('Kaffe') ?></h3>
             </div>
             <div class="panel-body">
-                <p><a class="btn btn-success" href="javascript:select();" target="_blank"><?php echo $this->translate('Svart') ?> </a></p>
+                <p><a class="btn btn-success" href="javascript:selectItem();" target="_blank"><?php echo $this->translate('Svart') ?> </a></p>
                 <p><a class="btn btn-success" href="http://framework.zend.com/zf2" target="_blank"><?php echo $this->translate('Mocca') ?> </a></p>
                 <p><a class="btn btn-success" href="http://framework.zend.com/zf2" target="_blank"><?php echo $this->translate('Cappuccino') ?> </a></p>
             </div>
@@ -82,5 +82,8 @@
 </div>
 
 <script>
-    alert(1);
+    var selectedItem = null;
+    function selectItem() {
+
+    }
 </script>

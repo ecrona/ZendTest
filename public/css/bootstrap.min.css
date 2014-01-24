@@ -18,3 +18,7 @@
 .panel-body p {
 	display: block;
 }
+.btn-hovered {
+  background-image: none;
+  background-color: #000;
+}
